@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome!</title>
+	<meta charset="UTF-8">
+	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<meta content="Andrea Lea Personal Trainer website designed and built by Liam Irwin at BrandNUDL Laboratories" name="description">
+	<meta content="Brandnudl.com, Liam Irwin, Illustration, Graphic Design, Web Design" name="keywords">
+	<meta content="Liam Irwin" name="author">
+	<link href="icon.png" rel="icon" type="image/png">
+
+	<style type="text/css">
+
+	@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+	body {
+	   overflow: hidden;
+	   margin: 0 auto;
+	   height: 100vh;
+	}
+	div#enter {
+	   position: fixed;
+	   top: 10%;
+	   display: -webkit-flex;
+	   display: -moz-flex;
+	   display: -ms-flex;
+	   display: -o-flex;
+	   display: flex;
+	   justify-content: center;
+	   width: 100%;
+	   z-index: 1000;
+	}
+	button.enterSite {
+		width: 200px;
+		font-size: 1.5em;
+		font-family: 'Roboto', sans-serif;
+		background-color: rgba(0,0,0,0.2);
+		border: none;
+		color: #f2f2f2;
+		text-shadow: 1px 1px 1px #444;
+		-webkit-box-shadow: inset 0px 0px 38px 18px rgba(0,0,0,0.11);
+		-moz-box-shadow: inset 0px 0px 38px 18px rgba(0,0,0,0.11);
+		box-shadow: inset 0px 0px 38px 18px rgba(0,0,0,0.11);
+		border-radius: 3px;
+		padding: 15px 8px;
+		transition: all 0.3s ease;
+	}
+	button:hover {
+		background-color: rgba(0,0,0,0.1);
+		letter-spacing: 2px;
+		cursor: pointer;
+	}
+	div.wrapper {
+	   position: relative;
+	   width: 100%;
+	   max-width: 1600px;
+	   margin: 0 auto;
+	   background: url(sky.png) no-repeat center center;
+	   -webkit-background-size: cover;
+	   background-size: cover;
+	}
+	.birds, .clouds1, .clouds2, .mount1, .mount2, .mount3, .balloon, .city, .lab, .cows {
+	   width: 100%;
+	   height: 100vh;
+	   padding: 0;
+	   background-clip: padding-box;
+	   margin: 0 auto;
+	}
+	.birds {
+		background: url(birds.png) no-repeat bottom;
+	   -webkit-background-size: contain;
+	   background-size: contain;
+	}
+	.clouds1 {
+		background: url(clouds1.png) no-repeat bottom;
+	   -webkit-background-size: contain;
+	   background-size: contain;
+	}
+	.mount1 {
+		background: url(mountain1.png) no-repeat bottom;
+	   -webkit-background-size: contain;
+	   background-size: contain;
+	}
+	.mount2 {
+	   background: url(mountain2.png) no-repeat bottom;
+	   -webkit-background-size: contain;
+	   background-size: contain;
+	}	
+	.clouds2 {
+	   background: url(clouds2.png) no-repeat bottom;
+	    -webkit-background-size: contain;
+	   background-size: contain;
+	}
+	.city {
+	   background: url(city.png) no-repeat bottom;
+	    -webkit-background-size: contain;
+	   background-size: contain;
+	}
+	.mount3 {
+	   background: url(mountain3.png) no-repeat bottom;
+	    -webkit-background-size: contain;
+	   background-size: contain;
+	}
+	.balloon {
+	   background: url(balloon.png) no-repeat bottom;
+	    -webkit-background-size: contain;
+	   background-size: contain;
+	}
+	.lab {
+	   background: url(lab-factory.png) no-repeat bottom;
+	    -webkit-background-size: contain;
+	   background-size: contain;
+	}
+	.cows {
+	   background: url(foreground.png) no-repeat bottom;
+	   -webkit-background-size: contain;
+	   background-size: contain;
+	}
+	@media screen and (max-width: 768px) {
+		.birds {
+			background-position: -50px center;
+		}
+		.balloon {
+			background-position: center center;
+		}
+		.clouds2 {
+			background-position: center;
+		}
+	}
+	@media screen and (orientation: landscape)
+				  and (max-width: 768px) {
+		.cows {
+		-webkit-background-size: cover;
+		background-size: cover;
+		}
+	}
+
+	</style>
+</head>
+<body>
+	<div id="enter">
+		<a href="bn-main.html"><button class="enterSite">Enter!</button></a>
+	</div>
+	<div class="wrapper">
+		<div id="scene">			
+			<div class="clouds1" data-depth="0.3"></div>			
+			<div class="mount1" data-depth="0.8"></div>
+			<div class="clouds2" data-depth="1.2"></div>
+			<div class="mount2" data-depth="0.3"></div>
+			<div class="city" data-depth="0.5"></div>
+			<div class="mount3" data-depth="0.6"></div>
+			<div class="balloon" data-depth="2"></div>
+			<div class="lab" data-depth="0.4"></div>
+			<div class="cows"></div>
+			<div class="birds"data-depth="1.5"></div>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js">
+	</script> 
+	<script>
+	   var scene = document.getElementById('scene');
+	   var parallaxInstance = new Parallax(scene);
+	</script>
+</body>
+</html>
