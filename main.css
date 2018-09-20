@@ -331,6 +331,11 @@ section#hero {
     background-position: -7000px;
   }
 }
+@keyframes playsmall {
+  100% {
+    background-position: -5250px;
+  }
+}
 div.hero-block {
   position: relative;
   top: 100px;
@@ -1087,6 +1092,16 @@ form textarea {
   }
     section#form {
     background-position: 100px 0;
+  }
+
+  #hero-sprite {
+    width: 750px;
+    height: 444px;
+    background: url(hero-slides-large.png);
+    background-repeat: no-repeat;
+    animation: playsmall 1.5s steps(7) infinite;
+    -webkit-background-size: 5250px;
+    background-size: 5250px;
   }
 }
 /* ------------------------------------------ SMALLEST ------------------------------------*/
